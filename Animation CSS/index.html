@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+
+        .kotak{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            animation: animasiKotak 4s ease 4 alternate;
+            background-image: url(img/chandri-anggara-ybKYr6lQKlY-unsplash.jpg);
+            background-size: cover;
+        }
+
+        .border1{
+            width: 0px;
+            height: 30px;
+            background-color: aqua;
+            animation: identifier 4s ease 4 alternate;
+            
+        }
+        
+        .border2{
+            width: 0px;
+            height: 30px;
+            background-color: yellowgreen;
+            animation: identifier 4s ease 4 alternate;
+        }
+
+        .wrap{
+            display: flex;
+        }
+
+        .border3{
+            width: 0px;
+            height: 30px;
+            background-color: brown;
+            animation: identifier2 4s ease 4 alternate;   
+        }
+        
+        .border4{
+            width: 0px;
+            height: 30px;
+            background-color: darkmagenta;
+            animation: identifier2 4s ease 4 alternate;   
+            
+        }
+
+        @keyframes identifier2 {
+            0%{
+                width: 0px;
+                height: 0px;
+            }
+            
+            100%{
+                width: 30px;
+                height: 500px;
+            }
+        }
+
+
+        @keyframes identifier {
+            0%{
+                width: 0px;
+                height: 0px;
+            }
+            
+            100%{
+                width: 560px;
+            }
+        }
+
+
+        @keyframes animasiKotak{
+            0% {
+                width: 200px;
+            }
+
+            50%{
+                width: 500px;
+                height: 500px;
+            }
+
+            100% {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border1"></div>
+    <div class="wrap">
+        <div class="border3"></div>
+        <div class="kotak"></div>
+        <div class="border4"></div>
+    </div>
+    <div class="border2"></div>
+</body>
+</html>
