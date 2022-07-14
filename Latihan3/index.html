@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid | areas & gap</title>
+    <style>
+      .container {
+        margin: 50px auto;
+        background-color: aliceblue;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "sidebar content content"
+          "footer footer footer";
+        /* column-gap: 10px;
+        row-gap: 10px; */
+        gap: 10px;
+      }
+
+      .item {
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* 
+      .item:nth-child(even) {
+        background-color: antiquewhite;
+      } */
+
+      .header {
+        grid-area: header;
+        background-color: yellow;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: aqua;
+      }
+
+      .content {
+        grid-area: content;
+        background-color: cadetblue;
+      }
+
+      .footer {
+        grid-area: footer;
+        height: 50px;
+        background-color: darkgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header">Header</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item content">Content</div>
+      <div class="item footer">Footer</div>
+      <!-- <div class="item">1</div>
+      <div class="item">1</div>
+      <div class="item">1</div>
+      <div class="item">1</div>
+      <div class="item">1</div> -->
+    </div>
+  </body>
+</html>
